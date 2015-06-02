@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm13="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="ce16bcdf-2d63-4712-a1e5-555841b4b7c9" name="UMLComponentDiagram1" linkedPackageId="5ab54ede-82dd-4eaf-af96-008f47d9741e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="9fc3dce0-a58b-47e3-b22f-defd080522d5">
+      <profileInstance Id="9d22f2ab-dba1-480b-b935-c09c63995941" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="43dc3334-b9da-4fa3-9bfd-e0a0fe6704bf">
+      <profileInstance Id="f9a08331-0c2d-4926-b496-9ab36f69d0dc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="e0200a61-5669-420c-bce1-0089cb49e90a" name="Веб-сервер клієнта" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b317e17a-4f1b-4303-b203-1b4c62ac2927" />
+        <ownedAttributesInternal>
+          <providedInterface Id="eb0cea9a-271b-4b63-96eb-ff3d1c760791" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8de7a13d-1ef5-4ff8-9f99-c9686b60734b" />
+            <type_NamedElement>
+              <interfaceMoniker Id="5e984552-ea5f-4134-92f5-62f07085998e" LastKnownName="Веб сайт авіакомпанії" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="26459727-b41a-4e27-ab01-1a51be77231e" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="25645f47-52c9-41ae-bc3e-060bda1941be" />
+            <type_NamedElement>
+              <interfaceMoniker Id="58a91751-1eec-4f19-82d3-d5c04d7cbce2" LastKnownName="Авторизація платежа" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="fa2e8638-70c7-4c68-b968-683af6e34043" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="2464156a-6050-4203-890d-66a09bb86eea" />
+            <suppliersInternal>
+              <dependency Id="5899b2d9-3fc4-403f-be01-66e4bc935bb9">
+                <providedInterfaceMoniker Id="c984e6a5-cd88-4a25-8551-a6f17e400ba1" LastKnownName="Port1" />
+                <elementDefinition Id="c1af4962-3cce-4dde-b07a-f121c6b4ee0e" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="8651c4dd-5d0f-4a6c-bbaf-a8c6b579e906" LastKnownName="Резервування квитка" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="34b5f79b-a21f-4400-a182-034fe71a5d72" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="bbaf7e6c-ae33-42b7-b171-3b63dc106caf" />
+            <suppliersInternal>
+              <dependency Id="b81e7f24-a1e0-423c-b4b8-bca03d5e0776">
+                <providedInterfaceMoniker Id="1c6685e7-297d-41f2-b8c8-28cdf30014aa" LastKnownName="Port2" />
+                <elementDefinition Id="91c80614-c606-43f6-9c14-498ce4cf54d2" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="46d33a2d-158f-49d2-bd27-76872af98833" LastKnownName="Актуалізація даних" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="d7404952-ef68-45f5-b5c7-df7d6afa9f02" name="Port5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8b4f82e4-93f3-4190-9a93-80dfec564e3c" />
+            <suppliersInternal>
+              <dependency Id="4e80c5ed-d05d-4c74-b894-239049b5f32d">
+                <providedInterfaceMoniker Id="f41b9091-5278-46e1-88dd-2d04a11285d9" LastKnownName="Port3" />
+                <elementDefinition Id="fd27b58d-d50b-4538-880e-379a7a8e2903" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="fba0cec0-fef9-47a3-8015-b5d94d015eae" LastKnownName="Авторизація адміністратора" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="d7f2be31-e3bd-42e3-9a7d-1be5d90a5a35" name="Сервер авіакомпанії " isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd0dc344-0040-41a6-a7b7-5005a1e2478f" />
+        <ownedAttributesInternal>
+          <providedInterface Id="c984e6a5-cd88-4a25-8551-a6f17e400ba1" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="20f52e5b-6d7d-48e7-8e75-3800748b9f58" />
+            <type_NamedElement>
+              <interfaceMoniker Id="fc7f3a33-2314-4b65-b6e9-c7b71e2e23a6" LastKnownName="Резервування квитка" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="1c6685e7-297d-41f2-b8c8-28cdf30014aa" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="cd38e971-2f71-40b4-9972-0733b07d1059" />
+            <type_NamedElement>
+              <interfaceMoniker Id="dfec5f34-8d14-4e83-bea3-ba3786bb7ea7" LastKnownName="Актуалізація даних" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="f41b9091-5278-46e1-88dd-2d04a11285d9" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="d6eb0c2f-b429-4b4e-adb5-311c45bc3af2" />
+            <type_NamedElement>
+              <interfaceMoniker Id="cdc4e9a0-ae56-498d-b51f-aefe2b8d4b72" LastKnownName="Авторизація адміністратора" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="5e984552-ea5f-4134-92f5-62f07085998e" name="Веб сайт авіакомпанії" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b457a44-607b-4d0b-9ba8-250df31999f0" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="58a91751-1eec-4f19-82d3-d5c04d7cbce2" name="Авторизація платежа" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26dcab30-9172-4d4c-9f7e-a0cae1df536c" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="8651c4dd-5d0f-4a6c-bbaf-a8c6b579e906" name="Резервування квитка" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6d3d5db-dfd7-464a-b4bd-f2148811aebc" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="fc7f3a33-2314-4b65-b6e9-c7b71e2e23a6" name="Резервування квитка" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="52e6d5ae-c520-4ebb-8725-761d27c5c1e6" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="46d33a2d-158f-49d2-bd27-76872af98833" name="Актуалізація даних" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6b10ea44-403a-4725-8b8a-9f00d1995f99" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="dfec5f34-8d14-4e83-bea3-ba3786bb7ea7" name="Актуалізація даних" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4c87ebc6-ca3c-4a5c-a3b0-680285dd048f" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="cdc4e9a0-ae56-498d-b51f-aefe2b8d4b72" name="Авторизація адміністратора" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4911d911-0f8e-4542-ad41-9b100b986531" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="fba0cec0-fef9-47a3-8015-b5d94d015eae" name="Авторизація адміністратора" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4ebaeca-3bf1-4708-9d40-8f6cc1c98a2a" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="5ab54ede-82dd-4eaf-af96-008f47d9741e" name="L3">
+    <elementDefinition Id="b63ab5c2-f1e0-4a01-95a9-bc55709eb75f" />
+  </package>
+</componentModel>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="48210735-3a89-4734-abed-d6dde1963422" name="Activity1" linkedPackageId="8740bb84-c92f-4ea8-b4b6-a1a3c8f0ae72" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="3dbff3fc-0b15-4c59-b1d1-41914e1b058c">
+      <profileInstance Id="ce521786-f1b9-47c8-a821-b1db740ee66b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e8ce6ff7-6307-417a-b6fa-0183f697af0f">
+      <profileInstance Id="cc3629d5-f233-46d3-b4c5-2040fcd5b8fd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="3d45d53c-70d4-45fb-8fcc-2fa1462e2c98" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="6f9a5a4a-170b-4ffc-81c6-ea27f0fa2883" />
+        <nodes>
+          <initialNode Id="c9f52064-b5a0-4f3b-b1e2-78be22157e09" name="Initial1" isLeaf="false">
+            <elementDefinition Id="c8762a8c-19c4-4a81-99f0-edcdeb8abe0c" />
+            <flowNodeTargets>
+              <controlFlow Id="dd719dee-bebe-4bc5-bc65-e9edea38c79e" isLeaf="false">
+                <opaqueActionMoniker Id="0f7f16e6-9d64-47c2-ae75-8eedf309cc8f" LastKnownName="Знайти рейс" />
+                <elementDefinition Id="6230cb10-c171-4ef1-bcca-3e753c20f045" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <objectNode Id="3e5728d4-06c1-485e-97fb-336efb305e55" name="Вибраний рейс" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="9ca1a99f-9d55-442e-8cf8-9212ab5349c3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d4cb5b9f-d3f9-40d1-9c38-8edc69af8346" LastKnownName="Flight" />
+            </type_NamedElement>
+            <objectFlowTargets>
+              <objectFlow Id="ff7f4fc3-1ab1-46c7-8548-ff8e5d14a6a2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="488df602-cc6d-4427-aece-24f97ae34421" LastKnownName="Decision1" />
+                <elementDefinition Id="20ba4fc0-60ae-44e2-bff6-bd2d54b5fa39" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="7c8420a0-bb40-4c57-b11a-e06f15a6aa85" name="2147483647" value="2147483647">
+                <elementDefinition Id="35d810ef-4f68-4a16-84de-7d0aa1cd4d95" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="0f7f16e6-9d64-47c2-ae75-8eedf309cc8f" name="Знайти рейс" isLeaf="false">
+            <elementDefinition Id="6bce276c-b674-41a4-a47b-1f92c6b8b329" />
+            <objectFlowTargets>
+              <objectFlow Id="ee960652-17ae-4058-b182-dc0dab37ea4b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="3e5728d4-06c1-485e-97fb-336efb305e55" LastKnownName="Вибраний рейс" />
+                <elementDefinition Id="bd88888f-dc4c-4d1a-9e9d-a09fb382b41b" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <decisionNode Id="488df602-cc6d-4427-aece-24f97ae34421" name="Decision1" isLeaf="false">
+            <elementDefinition Id="84b792fa-8dd2-4a78-9867-a95f50392334" />
+            <flowNodeTargets>
+              <controlFlow Id="ba851690-e25c-4b54-bc66-27f6b174763b" guard="option = reserve" isLeaf="false">
+                <opaqueActionMoniker Id="39f9226d-9d03-4c77-899a-d345dfabcfb2" LastKnownName="Резервування" />
+                <elementDefinition Id="23f80835-9348-414e-a0de-8fe9d8663748" />
+              </controlFlow>
+              <controlFlow Id="7e6b8791-185f-4a13-9a0b-5574a1ddc6ef" guard="option = buy" isLeaf="false">
+                <opaqueActionMoniker Id="e1f25a7e-abea-4f2d-9323-f5255ed4f166" LastKnownName="Купівля" />
+                <elementDefinition Id="4278b40f-b0d3-4996-9d14-6a8fdba7af2b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="39f9226d-9d03-4c77-899a-d345dfabcfb2" name="Резервування" isLeaf="false">
+            <elementDefinition Id="e6cdb586-26e0-4675-8317-6b28d9aa12aa" />
+            <objectFlowTargets>
+              <objectFlow Id="30b7eee2-1884-4fcd-8770-fdb1fa677a38" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="05bc754d-6ad7-402f-96f1-94bb31386759" LastKnownName="Квиток" />
+                <elementDefinition Id="1d242e49-5515-42ae-830f-1f3258f46ff5" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="e1f25a7e-abea-4f2d-9323-f5255ed4f166" name="Купівля" isLeaf="false">
+            <elementDefinition Id="f0b768fe-6f10-4c6e-bac6-a376e7b9c2c7" />
+            <objectFlowTargets>
+              <objectFlow Id="938ea6a2-f9a3-47b0-b686-a7438ada9708" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="bd4b91eb-2a81-41d6-842e-5807bb5a64c9" LastKnownName="Квиток" />
+                <elementDefinition Id="ad6e710e-cb6b-4d30-840e-32e855b91eaf" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="05bc754d-6ad7-402f-96f1-94bb31386759" name="Квиток" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="2ce3d679-342c-4859-8112-37ca0d7985ec" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e5931ea1-3a6d-44bd-be8f-dee5c29cc8b1" LastKnownName="Order" />
+            </type_NamedElement>
+            <objectFlowTargets>
+              <objectFlow Id="c80c2a15-f185-457c-9aba-07b3bae5ee90" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="56d9d8bb-9857-4911-a80c-bfa55975bc89" LastKnownName="Отримання номеру квитка" />
+                <elementDefinition Id="cc36eecf-6571-4e74-ae70-49f6e5b8bc3a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="7e9ee0e6-9852-4789-971d-5597fa512d3d" name="2147483647" value="2147483647">
+                <elementDefinition Id="1d7ebe0b-e9ae-4ac1-a100-ec48112a3c6b" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="56d9d8bb-9857-4911-a80c-bfa55975bc89" name="Отримання номеру квитка" isLeaf="false">
+            <elementDefinition Id="aa110606-4a39-4523-9373-18aae1e1b0e5" />
+            <flowNodeTargets>
+              <controlFlow Id="888c31ee-46d7-428b-9971-dfba68aa8f23" isLeaf="false">
+                <activityFinalNodeMoniker Id="6cdf8ee6-21db-4174-a4b2-07a91a511e29" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="9aa8bec2-fc86-4361-a8dc-b19de753e9df" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="6cdf8ee6-21db-4174-a4b2-07a91a511e29" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="59fc54ba-5a43-4744-ae32-7353d4e58335" />
+          </activityFinalNode>
+          <objectNode Id="8de8cd21-1fcd-4426-ab47-239d1bfddb80" name="Картка" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="fcbcd819-9c49-49cf-8e26-617cd3e6de15" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9b11d9c4-e8e0-4211-a846-e288882a8c5a" LastKnownName="UserCard" />
+            </type_NamedElement>
+            <objectFlowTargets>
+              <objectFlow Id="61bbe343-c2fb-42e1-8b06-1b05c2733ed1" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="e5168193-5e1f-4f99-9508-951e0f79e6c6" LastKnownName="Валідація картки" />
+                <elementDefinition Id="54893c50-32da-463d-91fa-5a7d45742d07" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="e2e264a8-6ba2-46b1-b919-0cc4e2bd54ac" name="2147483647" value="2147483647">
+                <elementDefinition Id="fa55f954-0a43-4de8-846f-61fc6309ff60" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="bd4b91eb-2a81-41d6-842e-5807bb5a64c9" name="Квиток" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e4dc6030-580e-468b-b617-03e5975521bc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="91fdd132-d46c-441e-bcdc-daf10a4c3ddd" LastKnownName="Order" />
+            </type_NamedElement>
+            <objectFlowTargets>
+              <objectFlow Id="dcca2ea7-e9a8-48fd-94f0-f470c0cfcaa9" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="70d3a1fd-e6d0-4739-97ce-815d24e1596d" LastKnownName="Оплата квитка" />
+                <elementDefinition Id="2d316583-dc6d-47f0-9d35-85e06e3c2225" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="3aadbedd-b3e3-43c3-ac94-2fe1267e61b1" name="2147483647" value="2147483647">
+                <elementDefinition Id="f04d0ef5-a93e-4c6a-8840-cffa9553ba69" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="70d3a1fd-e6d0-4739-97ce-815d24e1596d" name="Оплата квитка" isLeaf="false">
+            <elementDefinition Id="c01ef0e5-4127-45b9-aeff-b4008c8db565" />
+            <flowNodeTargets>
+              <controlFlow Id="7501bcb9-4e80-488d-8f1f-f50fc8c22c1e" isLeaf="false">
+                <opaqueActionMoniker Id="0c0bec81-09d6-408a-a23b-0c377dcd1b85" LastKnownName="Отримання інформації про картку" />
+                <elementDefinition Id="49fa918c-d33a-42e7-88bc-28c626bc8e58" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0c0bec81-09d6-408a-a23b-0c377dcd1b85" name="Отримання інформації про картку" isLeaf="false">
+            <elementDefinition Id="b5f3eff1-18cf-4174-a5fb-2828e330e339" />
+            <objectFlowTargets>
+              <objectFlow Id="f699ad7e-5984-48d0-9911-f7b71b39a994" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="8de8cd21-1fcd-4426-ab47-239d1bfddb80" LastKnownName="Картка" />
+                <elementDefinition Id="3a45406a-4030-4428-9d67-ee68d0545f54" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="e5168193-5e1f-4f99-9508-951e0f79e6c6" name="Валідація картки" isLeaf="false">
+            <elementDefinition Id="acf66e89-8549-48fc-934c-1ace2bc0f693" />
+            <flowNodeTargets>
+              <controlFlow Id="640dea30-3de2-4ec9-af52-e119fa621bb3" isLeaf="false">
+                <decisionNodeMoniker Id="91f54966-028d-47d8-9daa-ecc67d365362" LastKnownName="Decision2" />
+                <elementDefinition Id="8871d189-e115-4a10-a98c-f80ff261552d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="91f54966-028d-47d8-9daa-ecc67d365362" name="Decision2" isLeaf="false">
+            <elementDefinition Id="d5fc4c9f-6c68-449e-bb47-1d8733936227" />
+            <flowNodeTargets>
+              <controlFlow Id="404249b2-ea66-4387-ac5f-fdc339b21e47" guard="validation = true" isLeaf="false">
+                <opaqueActionMoniker Id="dee7f83a-7651-41e7-9dbc-6b53ea5d34d7" LastKnownName="Запит на переведення грошей" />
+                <elementDefinition Id="4f2f936e-9cb7-4b31-bb0b-f58865eccfed" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="dee7f83a-7651-41e7-9dbc-6b53ea5d34d7" name="Запит на переведення грошей" isLeaf="false">
+            <elementDefinition Id="37acbb60-22b8-47d5-b0f5-083b15685554" />
+            <flowNodeTargets>
+              <controlFlow Id="2f99d6d6-4ba6-424d-b986-a85d57cb53d7" isLeaf="false">
+                <activityFinalNodeMoniker Id="6cdf8ee6-21db-4174-a4b2-07a91a511e29" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="a4eaaa08-11dd-4df4-975c-63685916a2b3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+    <packageHasNamedElement>
+      <referencedType Id="d4cb5b9f-d3f9-40d1-9c38-8edc69af8346" name="Flight" isAbstract="false" isLeaf="false" cachedFullName="L3::Flight">
+        <elementDefinition Id="b10bfe0c-bf92-4cdb-b387-2e053527229c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e5931ea1-3a6d-44bd-be8f-dee5c29cc8b1" name="Order" isAbstract="false" isLeaf="false" cachedFullName="L3::Order">
+        <elementDefinition Id="12eb6cbe-32db-4624-95b4-a6e127ba1158" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="91fdd132-d46c-441e-bcdc-daf10a4c3ddd" name="Order" isAbstract="false" isLeaf="false" cachedFullName="L3::Order">
+        <elementDefinition Id="12eb6cbe-32db-4624-95b4-a6e127ba1158" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9b11d9c4-e8e0-4211-a846-e288882a8c5a" name="UserCard" isAbstract="false" isLeaf="false" cachedFullName="L3::UserCard">
+        <elementDefinition Id="4464e706-ee5e-45e8-b704-17a2364cfc8b" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8740bb84-c92f-4ea8-b4b6-a1a3c8f0ae72" name="L3">
+    <elementDefinition Id="b63ab5c2-f1e0-4a01-95a9-bc55709eb75f" />
+  </package>
+</activityRootModel>

@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="4990d57f-67a4-4676-93ae-1ec80919bb58" name="UMLClassDiagram1" linkedPackageId="1d4b66e3-fa60-408d-b159-587fca66977a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f13608a1-5f20-4813-9508-e09f430234b2" name="Airport" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="54593f97-d964-40c4-b30b-ddde4b30287c" />
+        <ownedAttributesInternal>
+          <property Id="514b46ad-9901-4de8-8516-e283ccbcd4a2" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="916c62bf-e0bc-4c86-bba0-2d8f61f7f844" />
+          </property>
+          <property Id="42993083-9f6e-474b-b1a3-b05458a48ace" name="code" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="95cf077c-7f64-4e4b-bad7-eaeedaf1ad41" />
+          </property>
+          <property Id="1141c26c-2462-4643-b29f-aeb714505054" name="address" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25b263ee-7f70-4f37-ad4a-8be7faad48c4" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="39a003b1-2767-4e59-a998-0292c015aaf3" name="chooseAirport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="917270f4-bdb2-4481-b410-7c20ebfc1b9c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2dd735d2-2bb6-44c4-812c-4a47b01eb1c6" name="Admin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="149d2de7-b71b-4194-b26d-3b1aff969fd0" />
+        <targetEnds>
+          <association Id="db2d0916-2d57-44cd-948a-6d472e18888b" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="FlightManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e902b4a7-fc23-43a2-8361-5d2d1ab08859" LastKnownName="FlightManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e9f0964-3916-46d6-af19-8777ed0e5ec8" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="13cc5060-e2bd-4ca4-bd59-b2862427e428" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70f09d0c-17e4-497e-82d0-0c74dc370828" name="FlightManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58103f4f-3dad-407f-8cdb-3aca92690e98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3ddd4748-9bd5-4396-a575-32a798676e2f" />
+          </association>
+          <association Id="c3141c7f-da88-4a81-901d-5765ea491827" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="AirportManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a45a04f8-66ce-4c01-b88b-afa445ef4e27" LastKnownName="AirportManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b85b9b1f-6360-4708-bc8a-9b1d1fd19129" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f124c3db-15fa-4c7a-a6fc-b04d6359b353" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21247ad7-1be8-4f5d-8da8-315509c82e12" name="AirportManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8baf4ab-e35e-4c78-bb19-a81932337860" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="88686c78-89dd-4f8a-80e9-06a45740376e" />
+          </association>
+          <association Id="fb401404-1d69-4761-8e86-0662d72a3b63" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="AirplaneManager" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d90bb778-1e15-4b9e-bd26-93709e4ce355" LastKnownName="AirplaneManager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9bdc40c-b051-4e82-8a4c-88a42467f1d8" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c229b99-0738-47b9-83e4-74260a7a9f04" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="595d1867-af63-47c9-8a9b-d344629fdbb9" name="AirplaneManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b119d3b-952a-4114-986f-d349a844be0d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="73b14150-0259-4dad-96d2-13a16b2ed7a3" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="52be2dd5-4a4f-4da3-b045-23bd8e53dfcc" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d48dcefb-5618-40da-8842-70ba5d5fe45a" />
+          </property>
+          <property Id="f64de4ba-d76e-4e17-8403-2af4e61f43cd" name="password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b09e247b-171a-4437-a8b7-70c91d367e7d" />
+          </property>
+          <property Id="05fbc25f-99e0-45b7-9767-c32ae4f1f3e5" name="isAuthorized" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9b029631-217a-4695-8bf3-7e9cc0253ac9" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d9c9cba6-2281-46c2-a159-b5a45a8fdd36" name="authorization" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="24142088-080d-4151-b420-327499922caa" />
+          </operation>
+          <operation Id="7282c3bb-c0ba-4814-9055-e51036491e29" name="enterInformation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="87f4a2d1-cce4-4d48-83c6-6901cf65a81f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="97055858-293b-467d-9444-5c7bc89d2606" name="OrderManger" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a6d03047-e099-45a4-b231-1829a12a0362" />
+        <targetEnds>
+          <association Id="87968862-2123-45af-979f-b9e64ca3f5be" isDerived="false" sourceEndRoleName="Order" targetEndRoleName="Flight" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1999f0eb-4fe0-405e-9e39-60b1fe060d05" LastKnownName="Flight" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fcf39a6-3131-423d-8be1-471b40925f03" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5e253b5b-51f4-4808-b974-d56c8b1d6620" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="efcbf78f-2941-4e20-9f6f-9fe4ddc0cc1b" name="Flight" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="a80e4197-1826-4241-82e7-c9e3bd9b225c" name="Lower" value="*">
+                      <elementDefinition Id="15a43d00-7b34-43ae-87f0-c007cee52c37" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="acb101f6-b171-4c03-ad73-264c644f6f17" name="Upper" value="*">
+                      <elementDefinition Id="95e96a2a-1d19-4083-afcd-d18eaacb3ad4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a3226563-eb2a-4210-9ffd-9fe95377b50a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="337bb661-4703-4378-9102-99a77ed35576" />
+          </association>
+          <association Id="4cc3a775-a63d-46ff-a279-47f91f065ce9" isDerived="false" sourceEndRoleName="OrderManger" targetEndRoleName="Order" isLeaf="false" isAbstract="false">
+            <classMoniker Id="edb7e6ce-b0c6-4692-8a6e-9aa38aceacad" LastKnownName="Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39f4c864-6731-4610-9851-5bb10e3529fd" name="OrderManger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37f10f35-3787-41c4-b92b-5dc3deeb053d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43cacb0a-c815-472b-b9a3-76a86d2533b1" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e605bf05-3ef7-44c2-9f87-de6703bebda2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a88f37de-611b-426c-a2cf-7e7b28c8ead8" />
+          </association>
+          <association Id="c6d95c77-5e7c-4dff-8a96-0c167f3d76e2" isDerived="false" sourceEndRoleName="OrderManger" targetEndRoleName="UserCard" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7f1a53b0-ff4b-44fe-9308-7106f9d4461f" LastKnownName="UserCard" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6f9e21b-884a-4d50-9797-8d9c676f2105" name="OrderManger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03a5735d-6dbc-4995-8697-3448515465a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e6bfdfc-e448-46b1-9aa2-73a05dfb12d3" name="UserCard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e885b5b-6489-4129-a8d2-6eb3bfafedda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="56af7476-8214-451f-aaf8-b2d9ec19d5a6" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="870faa65-8e4d-4014-81fc-0be1f8881f7c" name="findFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="212a8fc8-d39a-411b-8b43-b24047dc7533" />
+          </operation>
+          <operation Id="e4911404-3db3-412b-a617-0e47b4838db6" name="getTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b9ea7f6-da44-482d-ac2c-9f60a153030b" />
+          </operation>
+          <operation Id="e766fd65-c8e5-40fd-a009-b7b1a5745351" name="payTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1447db40-ffc5-4d5f-b412-4adf1bdea159" />
+          </operation>
+          <operation Id="32a4865e-d3d5-4361-a457-1c8c0ea29213" name="cancelReservation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="857ce2bd-4597-492e-8c8c-7e2de1bf5257" />
+          </operation>
+          <operation Id="bc38478c-4190-45eb-a9b9-44f019427e70" name="getReserveNumber" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0c4dbe12-8ec5-490b-85bb-3a9655c4ab5b" />
+          </operation>
+          <operation Id="d0487c5e-759f-40e8-8cd9-bbc71a8b776f" name="reserveTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b8e16ed-04d9-4f05-93cd-ac716e0928c7" />
+          </operation>
+          <operation Id="3711b2f8-2a71-4025-b41d-2f2faa42fb8b" name="buyTicket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="66bfe6fb-e24c-4f58-8773-5982ee1e37e0" />
+          </operation>
+          <operation Id="d08277a2-78f7-498b-bd34-434ffc3ac466" name="getCost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7f2325be-824e-4dc3-84fb-ba36f0b79de6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5ac5fc02-1897-44ad-93e9-20e4e4addd0b" name="flight" direction="In">
+                  <elementDefinition Id="f404e515-9a18-4b20-b646-94c3dab4e60b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="66a685b4-f702-44be-a479-03afb2a99eb2" LastKnownName="Flight" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c3884770-691e-4ad1-b580-5237dcf68ecb" name="getCardInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd1cc32e-0a31-4c12-99b9-f9297141a798" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1999f0eb-4fe0-405e-9e39-60b1fe060d05" name="Flight" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b10bfe0c-bf92-4cdb-b387-2e053527229c" />
+        <targetEnds>
+          <association Id="da95c34f-5f04-486d-bf48-173d99a6c55f" isDerived="false" sourceEndRoleName="Flight" targetEndRoleName="Airplane" isLeaf="false" isAbstract="false">
+            <classMoniker Id="35e94e17-37fd-4c6f-aed5-0eeac2436979" LastKnownName="Airplane" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0aeaedd6-0896-4499-8761-e3fdd3093559" name="Flight" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e00a35f-7e1d-42dc-8b63-c9a93e552177" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ba325b92-1f29-4fa2-9a90-b12e66d82316" name="Airplane" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c381fc1c-18d4-466f-8cbd-d7bce8681a93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3a0a994b-c4c6-47bc-af12-4cf69a016b75" />
+          </association>
+          <association Id="a1f61aca-f47e-473a-aba9-31c490ca7f9f" isDerived="false" sourceEndRoleName="Flight" targetEndRoleName="Airport" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f13608a1-5f20-4813-9508-e09f430234b2" LastKnownName="Airport" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28c7e931-f5a2-4a92-9f7b-2d089d0299de" name="Flight" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36e10767-298b-4345-a86d-86f68fade6a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce330ac7-0566-4a36-95f2-c583577d9268" name="Airport" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b547df28-fa61-4d21-95b4-b724ffc85ac0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1bff5331-24d7-40a3-bbaa-96d2994efcbe" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="deae73e8-c068-404a-9a1c-33116927edba" name="code" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bada1d58-2809-4e99-99c2-80215976db2a" />
+          </property>
+          <property Id="525c3d4c-7635-4c14-9bf5-d2e85580ca70" name="arrivalTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4183a616-2e06-4769-afa6-0bc51a223fce" />
+          </property>
+          <property Id="6149adcc-bfd5-4e7f-afb0-68d9574c4dc3" name="destination" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f91ab4e-484a-446a-ae3f-969f253a8875" />
+          </property>
+          <property Id="39e413d3-72b8-4580-9dc0-cb2fd64c9f22" name="departureTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="888ef03c-7aba-4733-845a-7d9b0c3db09f" />
+          </property>
+          <property Id="e2134c7c-c170-4524-ae17-8b20cc4710b5" name="airplane" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cf2bc974-2de6-48e1-b01a-d3e19a27105b" />
+          </property>
+          <property Id="4b56e377-2f61-4252-ae62-3e8c8c47f874" name="departure" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="892f5443-629a-4685-8a02-c8b144988e91" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d4ca0802-d8bd-47b3-82af-d245c5a3ac9b" name="getFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="245b2370-4777-435e-bc23-f87cd2fc8cfd" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="35e94e17-37fd-4c6f-aed5-0eeac2436979" name="Airplane" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3bd6f2cc-50ae-4e61-b8fc-3916770e0943" />
+        <ownedAttributesInternal>
+          <property Id="73dba8a7-20b0-4391-9a66-646c4495e8bb" name="code" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e87c1ba3-f322-49c3-8760-599575b83a81" />
+          </property>
+          <property Id="124c872e-4967-4924-a900-86476eec0caa" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f2542cc-3b26-4601-8e92-cf704c662860" />
+          </property>
+          <property Id="ae9ed16d-60a7-4147-846b-6b10035cd7bd" name="numberFirstClassSeats" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de35093e-d6b9-4d51-9ac5-e2c6d3ad70e8" />
+          </property>
+          <property Id="5a65d24e-765c-4ef0-b16c-dc3e15c945ae" name="numberSecondClassSeats" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5ccfd340-c638-435d-bc86-7cf1b30bc863" />
+          </property>
+          <property Id="696d6c78-f8c5-4410-b678-49c567d016ec" name="numberVoidFirstClassSeats" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6785f09c-f93f-4ad6-87a7-06314ebf84e3" />
+          </property>
+          <property Id="3771354b-208b-4ae5-8bfd-2b4585b86e57" name="numberVoidSecondClassSeat" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="48bf9b63-f648-4bbe-bbab-675e0755b822" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a45a04f8-66ce-4c01-b88b-afa445ef4e27" name="AirportManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8511ede8-7e21-4eec-b64f-94be0e355481" />
+        <targetEnds>
+          <association Id="08a17f09-edf6-4084-83f5-6f5ba5144a4a" isDerived="false" sourceEndRoleName="AirportManager" targetEndRoleName="Airport" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f13608a1-5f20-4813-9508-e09f430234b2" LastKnownName="Airport" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f855b16-0a45-494c-a283-103b981d7dc5" name="AirportManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f0338d49-f3d5-4333-876d-66b6bb6fcfae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2425a3f-195e-45ad-916c-474a7f4d33b8" name="Airport" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="22615560-29ef-4e90-bd46-48ee88c9bf52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0b8e89e8-7440-4ef1-b7bf-0b1d422d4506" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="f2897597-ad07-4ed9-9ffc-2a3572e79a41" name="findAirport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a33c7f76-6ded-4814-ad60-5eada7a2d14f" />
+          </operation>
+          <operation Id="557be378-e44a-4a5c-8631-3e8c3b5c6256" name="editAirport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="829a97fc-0de8-4a84-bd83-8fa3fda83639" />
+          </operation>
+          <operation Id="baca6290-e256-44a9-a423-2ba2946ea3a8" name="deleteAirport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f5aedb8f-2f99-49b8-bffa-2367ac447e92" />
+          </operation>
+          <operation Id="00c189e5-5232-4a26-8245-7c66676b8468" name="addAirport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c7730698-ac86-48a3-802a-444e17fab857" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d90bb778-1e15-4b9e-bd26-93709e4ce355" name="AirplaneManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fd3ade99-dad7-49d6-ae97-759f4b6898ef" />
+        <targetEnds>
+          <association Id="8826512c-b346-4210-8aea-d709906d72ef" isDerived="false" sourceEndRoleName="AirplaneManager" targetEndRoleName="Airplane" isLeaf="false" isAbstract="false">
+            <classMoniker Id="35e94e17-37fd-4c6f-aed5-0eeac2436979" LastKnownName="Airplane" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c6aecfe1-4749-4b4a-a8c0-c146a43c3f77" name="AirplaneManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8dad8fa8-83fc-4df6-b941-c2223b05fec2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b4ac304-ae5b-414f-80d4-7193ef95e83b" name="Airplane" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4f5f199f-823f-4ca5-a47d-a5d1738ae5ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4a41c521-5b01-48e6-b8c0-d7a7786baedd" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="04119b2f-f6f1-4be3-b38d-a02826f3f52f" name="addAirplane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d84955f-b96f-4202-a48e-08c14baace78" />
+          </operation>
+          <operation Id="807ecb52-ada1-4c9d-84a8-75ef9a60096e" name="deleteAirplane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c2dce4ae-9085-4e22-8242-17517fb5862e" />
+          </operation>
+          <operation Id="71d18c27-2c38-4d6e-b28c-2e63e514364b" name="editAirplane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e15f17e5-75be-4ed0-92d9-2f79d9d3812e" />
+          </operation>
+          <operation Id="d64973a4-9606-4788-90d0-f148de47c339" name="findAirplane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0695708-2838-483e-abb3-0f86fb1f637b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e902b4a7-fc23-43a2-8361-5d2d1ab08859" name="FlightManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="75c57291-0df6-4c27-ba76-0f5af5d64f60" />
+        <targetEnds>
+          <association Id="7d49e052-0635-482c-8e56-3357f3330031" isDerived="false" sourceEndRoleName="FlightManager" targetEndRoleName="Flight" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1999f0eb-4fe0-405e-9e39-60b1fe060d05" LastKnownName="Flight" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ffda20f1-eb91-4671-8286-09e54fb79a86" name="FlightManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2428542b-f222-4625-bcb1-1469d7296ae4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ab8408a-ed8a-406a-9402-1fee4c5511cb" name="Flight" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="06105efd-4949-443c-b1db-512e09487345" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d82415ee-8fa4-4261-b8c7-d19318f5b433" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="11a9e93a-1a0a-43ae-afa6-6f77ed30f81b" name="addFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d719b700-dd02-40a5-8bc0-585209e8e6c6" />
+          </operation>
+          <operation Id="db983aea-dc4b-4ec3-ab56-757682bf335a" name="deleteFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e000c5c2-e2ff-4158-b2bd-c73d6e295832" />
+          </operation>
+          <operation Id="d7dc3b47-9318-467f-8081-7889145399b3" name="editFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ece815a6-bd32-4fed-af17-2bbc8efe6d12" />
+          </operation>
+          <operation Id="b5cd7ed6-4c95-47d7-a762-f234ef13091c" name="findFlight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b880f25-3b48-435a-a7ad-31cc2a5587de" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7f1a53b0-ff4b-44fe-9308-7106f9d4461f" name="UserCard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4464e706-ee5e-45e8-b704-17a2364cfc8b" />
+        <ownedAttributesInternal>
+          <property Id="fe1b3b98-2e55-42b1-b696-8e0b2aeed84a" name="cardNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7026d867-955d-4baa-8bf9-aa81aa6f35e8" />
+          </property>
+          <property Id="c8c6af05-fc98-48d1-a695-e96813f63769" name="expirationDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f44e1704-8bfe-41bc-9c13-c4dc2725a359" />
+          </property>
+          <property Id="fe18395d-67cc-4be4-9b65-b8259283d211" name="CVV2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0408c4de-a439-454e-82cd-71d6c4be7873" />
+          </property>
+          <property Id="8b6e81ad-9bee-41c0-be31-ce560eafb388" name="isValid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8d9246fd-1f4d-4a17-8684-ccd5b4906d93" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="30b1c8e0-b5ed-4d4f-b41c-f40f5a0082eb" name="validate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ecde0664-414e-49d2-aec5-907cf7e156a0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="edb7e6ce-b0c6-4692-8a6e-9aa38aceacad" name="Order" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="12eb6cbe-32db-4624-95b4-a6e127ba1158" />
+        <ownedAttributesInternal>
+          <property Id="07ad5acd-e496-4cc5-a47a-48d94d579e1b" name="class" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27f006f1-f081-4a66-a2bd-5a549545b21a" />
+          </property>
+          <property Id="f5aab6d9-c16d-498c-a44e-0f1bdde68979" name="cost" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b469452a-5eb4-407a-90ae-7df20fea7a00" />
+          </property>
+          <property Id="993816de-6637-4529-8e48-a6b0edf7aa70" name="date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b27581c9-5175-4ec1-9a33-4f1bd692bb2b" />
+          </property>
+          <property Id="483e7018-aef3-4156-a7b1-f04840a31b3f" name="departure" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c46717d5-c9c8-426c-a2d5-cb3799e3cffa" />
+          </property>
+          <property Id="c18129cf-e055-404f-8aec-466e8d55e059" name="destination" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0a01ed5-514d-45ed-bd0d-197c3407a3d6" />
+          </property>
+          <property Id="e2d308ad-fa56-4981-a2e5-e06c3156c513" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="93fce2f3-6efa-467e-8e1e-f42f975c669a" />
+          </property>
+          <property Id="6fcdffc3-914e-49e4-b411-0dcf5874d45e" name="place" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b829120a-097b-406d-8bc5-46f8b249ef22" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="66a685b4-f702-44be-a479-03afb2a99eb2" name="Flight" isAbstract="false" isLeaf="false" cachedFullName="L3::Flight">
+        <elementDefinition Id="b10bfe0c-bf92-4cdb-b387-2e053527229c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="1d4b66e3-fa60-408d-b159-587fca66977a" name="L3">
+    <elementDefinition Id="b63ab5c2-f1e0-4a01-95a9-bc55709eb75f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4bbd76a8-22a5-4e89-9a2e-e06034587dd8">
+        <profileInstance Id="d347295a-74a6-4e35-8eb4-3a4b9725c737" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="dba7da16-20b8-4d53-8423-295b93bd52e3">
+        <profileInstance Id="393c7b5e-88f3-4f25-962e-f39dff37a567" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

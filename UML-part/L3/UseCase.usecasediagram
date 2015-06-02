@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="1d8a7b8b-f122-4e6e-a1b7-43e342935fa9" name="UseCase" linkedPackageId="009d6b37-e81f-4cc4-9a47-12752c768b27" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c789a608-02a0-4261-9ab1-4fbbc3f12544" name="Клієнт" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cadaf48f-12a1-4005-a6ad-53d04f0025bf" />
+        <targetEnds>
+          <association Id="daf6bdc6-e3c2-434e-804c-ee02b8f84411" isDerived="false" sourceEndRoleName="Клиент" targetEndRoleName="Робота с заказом" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="68b4f180-04da-4c30-a2ec-834afff42f40" LastKnownName="Робота с замовленням" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b51bf83c-2f22-42fe-b01f-179dbf747723" name="Клиент" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="55ed6cab-98ce-42b0-a6af-ac1db3a72b66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2993e110-322e-4231-8023-1c7516d75409" name="Робота с заказом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b07e863f-50c2-4812-90bb-c0c7cc344443" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6ee8a240-834a-4457-a946-ce1ac11f492b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="285157ac-a316-4929-b203-010edeb17bf0" name="Аутентифікація і авторизація адміністратора" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="38636632-e984-4010-a85a-983218639d83" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="68b4f180-04da-4c30-a2ec-834afff42f40" name="Робота с замовленням" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85f39fde-a4c8-4fc4-8b23-49f6fa023baf" />
+        <targetEnds>
+          <association Id="12e157c0-6867-445b-91bb-9f5890ec637f" isDerived="false" sourceEndRoleName="Робота с заказом" targetEndRoleName="СУБД" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="f41ca19a-d38f-4fd9-a09a-99094bcd1a38" LastKnownName="Система керуваеея аеропортами і рейсами" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6f35cb4-f2df-48d0-8847-4b01bbedbdec" name="Робота с заказом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c04bf6a-cbfb-4e02-a37a-87d342e0d729" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcb30841-59fe-4be9-968e-079d6958967c" name="СУБД" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e8c5aa9-7391-4c7e-a9cf-c01c0c416f28" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c453f7ab-ef9a-4905-a02b-d429be3a9188" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b0f9ae93-6183-4ee5-af1d-c1c16286c042" name="Актуалізація інформації про рейси" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e1a357c-8291-452d-8be3-3869672a0168" />
+        <extendedCases>
+          <extend Id="80820246-df61-48bb-9e81-dc7cfa51aee1">
+            <useCaseMoniker Id="669d075d-6d54-405a-b36b-69353654e895" LastKnownName="Робота з підсистемою адміністрування" />
+            <elementDefinition Id="bd0feddf-454a-4a03-afad-882888a39149" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3bf7b574-5444-4bd9-9157-0f79898faaea" name="Актуалізація інформації про аеропорти" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="721f9967-6b35-4c4a-9c5a-9d9b377e8431" />
+        <extendedCases>
+          <extend Id="503e0a92-d7f8-45fd-8a79-a101add38b94">
+            <useCaseMoniker Id="669d075d-6d54-405a-b36b-69353654e895" LastKnownName="Робота з підсистемою адміністрування" />
+            <elementDefinition Id="63c9eef6-a983-4f62-bbae-1c9891393288" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="71da4e1a-0881-4527-9059-240b8c5f9831" name="Актуалізація інформації про літаки" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5732e9fa-b2cd-48c2-a894-5585982cb6df" />
+        <extendedCases>
+          <extend Id="c5a74cc5-e339-442e-a66b-1278f09b7bea">
+            <useCaseMoniker Id="669d075d-6d54-405a-b36b-69353654e895" LastKnownName="Робота з підсистемою адміністрування" />
+            <elementDefinition Id="bf573819-18bd-4d14-8bd2-2dff479433c2" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="208e21e5-981b-4705-ba81-e2443c34eff4" name="Оформити замовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0471f07b-90da-4e20-bcb2-ffd3a6d0de8a" />
+        <extendedCases>
+          <extend Id="92b96c20-b750-4a47-88e2-6f27ebe57fd6">
+            <useCaseMoniker Id="68b4f180-04da-4c30-a2ec-834afff42f40" LastKnownName="Робота с замовленням" />
+            <elementDefinition Id="95dda1b3-4841-447b-91f2-514a7fb667c7" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c1edfc70-ac37-4b7c-90a5-c78f61974b68" name="Відмінити замовлення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4a1628ff-def4-4c06-9e7e-3c7bec84dc44" />
+        <extendedCases>
+          <extend Id="c4038805-d09e-4a36-b302-260660e248ff">
+            <useCaseMoniker Id="68b4f180-04da-4c30-a2ec-834afff42f40" LastKnownName="Робота с замовленням" />
+            <elementDefinition Id="efa5c487-9e93-4b2a-a81a-708f154068a8" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="f3143227-4976-4784-9881-d99a12c5b254" name="Адміністратор" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd4e0a9a-46ec-4568-a415-d0a7d8c9bc1e" />
+        <targetEnds>
+          <association Id="1c33174a-15ee-4f32-8c32-218abc0a0972" isDerived="false" sourceEndRoleName="Адміністратор" targetEndRoleName="Вхід в підсистему адміністрування" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="669d075d-6d54-405a-b36b-69353654e895" LastKnownName="Робота з підсистемою адміністрування" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bcfdb1af-d5c7-42b0-b297-76217037b339" name="Адміністратор" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ae34c236-c0b9-40e0-a69a-a485f908e5c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c2e12ee-0ae9-467d-a7eb-52419ff7a8b1" name="Вхід в підсистему адміністрування" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0bc47ae8-6ef1-40ac-8e5b-6a4fb7fb10a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a5ab4ff4-ffc6-4c6c-b8f3-d418da6c4acf" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="f41ca19a-d38f-4fd9-a09a-99094bcd1a38" name="Система керуваеея аеропортами і рейсами" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2e0b848-bdb4-47c2-887f-1d5a81145641" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="48ec4c30-f634-4ff0-86a5-2d2ce3665f99" name="Оплата замовлення" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a33f7878-7912-4df3-91a8-5b9c2ca7931f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="414aca39-cbd6-4b9f-b01b-ba05e12ffa34" name="Перечислення грошей" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6062842a-6e2f-40a2-8190-74af6a4602a7" />
+        <targetEnds>
+          <association Id="8a930d31-34f0-4cfc-98a7-686cca1d6042" isDerived="false" sourceEndRoleName="Перечислення грошей" targetEndRoleName="Банківський рахунок" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="09e43815-f31c-4b9d-ba3f-e49d16d911cb" LastKnownName="Банківський рахунок" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a95c747-5461-4b75-86bd-391b34b8d045" name="Перечислення грошей" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d1248046-b45d-4ddc-ab51-13946b5f34e5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63a429a6-b28a-4258-9747-17b42e92c2b8" name="Банківський рахунок" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1d845e11-f974-47a9-998a-1eea9649926a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b48b01b2-35eb-42a8-87c8-8f3e8b9dc768" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="10076254-f5dc-4187-aa6e-99c58cb22273">
+            <useCaseMoniker Id="208e21e5-981b-4705-ba81-e2443c34eff4" LastKnownName="Оформити замовлення" />
+            <elementDefinition Id="b036ba18-1263-492c-9f0d-d062dc973543" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="48ec4c30-f634-4ff0-86a5-2d2ce3665f99" LastKnownName="Оплата замовлення" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="09e43815-f31c-4b9d-ba3f-e49d16d911cb" name="Банківський рахунок" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62de3cdf-ebda-4b38-9fe4-29da6bbae518" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="669d075d-6d54-405a-b36b-69353654e895" name="Робота з підсистемою адміністрування" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b5256f24-c08c-4820-b5ea-32b48ae672d1" />
+        <targetEnds>
+          <association Id="0278f416-4910-45b8-a8c5-dc88db920718" isDerived="false" sourceEndRoleName="Вхід в підсистему адміністрування" targetEndRoleName="Система керуваеея аеропортами і рейсами" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="f41ca19a-d38f-4fd9-a09a-99094bcd1a38" LastKnownName="Система керуваеея аеропортами і рейсами" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="20490016-a96d-4871-8b99-3a5a86f8eb50" name="Вхід в підсистему адміністрування" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6900951b-41b0-478f-96e9-3cc55d9cb07c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fb9af33-a3e3-4ac6-8f1b-98c3617bedc5" name="Система керуваеея аеропортами і рейсами" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="be4e3db3-693e-4942-a46e-acac2ed196c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aa501cdd-2ce7-4983-81a5-8f49f1f5237a" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="a6840c5a-799a-4f91-8d35-aeca7658f008">
+            <useCaseMoniker Id="285157ac-a316-4929-b203-010edeb17bf0" LastKnownName="Аутентифікація і авторизація адміністратора" />
+            <elementDefinition Id="61442412-e787-4654-9105-a4334680decb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="009d6b37-e81f-4cc4-9a47-12752c768b27" name="L3">
+    <elementDefinition Id="b63ab5c2-f1e0-4a01-95a9-bc55709eb75f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="6f19c852-6877-4807-a7b5-300cd862e0f1">
+        <profileInstance Id="dd298c89-4a54-41be-b321-699397293558" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3fb34472-99de-413f-a8b4-603c660333f5">
+        <profileInstance Id="8c597409-b344-4369-b184-e53e20a826be" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
